@@ -46,6 +46,7 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
@@ -53,8 +54,12 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/data.js"></script>
+        <script src="scripts/models/interview.js"></script>
+        <script src="scripts/models/page.js"></script>
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/interview.js"></script>
+        <script src="scripts/controllers/page.js"></script>
         <!-- endbuild -->
 </body>
 </html>

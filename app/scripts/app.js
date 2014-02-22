@@ -1,5 +1,7 @@
 'use strict';
 
+var INTERVIEW;
+
 angular.module('performanceInterviewApp', [
   'ngRoute'
 ])
@@ -7,9 +9,13 @@ angular.module('performanceInterviewApp', [
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'InterviewCtrl'
+      })
+      .when('/pages/:page_id', {
+        templateUrl: 'views/page.html',
+        controller: 'PageCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        templateUrl: '404.html'
       });
   });

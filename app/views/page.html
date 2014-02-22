@@ -1,0 +1,63 @@
+<div class="jumbotron">
+  <h1>{{page.title}}</h1>
+
+
+    <div ng-switch="page.kind">
+      <p class="lead" ng-switch-when="page">
+        {{page.body.text}}
+      </p>
+    </div>
+
+
+  <p>
+    <a class="btn btn-lg btn-warning" ng-if="page.interview.previous_page(page)" ng-href="#{{page.interview.previous_page(page).url}}">Previous</a>
+    <a class="btn btn-lg btn-success" ng-if="!!page.interview.next_page(page)" ng-disabled="!page.answered()" ng-href="#{{page.interview.next_page(page).url}}">Next</a>
+    <a class="btn btn-lg btn-success" ng-if="!page.interview.next_page(page)" ng-disabled="!page.answered()" ng-href="#{{page.interview.next_page(page).url}}">Submit</a>
+  </p>
+</div>
+
+
+<div class="large-12 column page">
+  <h2>[{{page.id}}] {{page.title}}</h2>
+</div>
+
+<form name="page_form">
+  <div ng-switch="page.kind">
+    <div ng-switch-when="radio_button">
+      <fieldset class="fields" data-ng-repeat="option in page.body.options">
+        <input id="{{option.text}}" type="radio" name="{{page.id}}" value="{{option.text}}" ng-model="page.answer">
+        <label for="{{option.text}}">{{option.text}}</label>
+      </fieldset>
+      </form>
+    </div>
+
+    <div ng-switch-when="text">
+      <fieldset class="fields">
+        <input id="{{option.text}}" ng-model="page.answer" type="text"  name="input" value="{{option.text}}" ng-pattern="page.validation_regex" required>
+        <span ng-if="page.validation_message" class="error" ng-hide="page.hide" ng-show="page_form.input.$error.required">
+        {{page.validation_message}}</span>
+        <span ng-if="page.validation_message" class="pattern" ng-show="page_form.input.$error.pattern">
+        {{page.validation_message}}</span>
+      </fieldset>
+    </div>
+
+    <div ng-switch-when="page">
+      {{page.text}}
+    </div>
+
+
+    </div>
+    <div class="row navigation">
+    <div class="small-6 columns">
+      <a ng-if="page.interview.previous(page)" ng-href="#{{page.interview.previous_page(page).url}}">
+        <button id="prev_button">Previous</button>
+      </a>
+    </div>
+    <div class="small-6 columns">
+      <a ng-href="#{{page.interview.next_page(page).url}}">
+        <button ng-if="!!page.interview.next_page(page)" id="next_button" ng-disabled="page.answered()">Next</button>
+        <button ng-if="!page.interview.next_page(page)" id="next_button" ng-disabled="page.answered()">Submit</button>
+      </a>
+    </div>
+  </div>
+</form>
