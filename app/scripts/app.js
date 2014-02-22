@@ -3,12 +3,13 @@
 var INTERVIEW;
 
 angular.module('performanceInterviewApp', [
-  'ngRoute'
+  'ngRoute',
+  'btford.markdown'
 ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'views/interview.html',
         controller: 'InterviewCtrl'
       })
       .when('/pages/:page_id', {

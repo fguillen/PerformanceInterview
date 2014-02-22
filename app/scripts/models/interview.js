@@ -39,6 +39,9 @@ var Interview = function(data){
   }
 
   self.send_completion = function(){
+    //For development purposes: Don't go further than the latest question
+    event.preventDefault();
+
     $.ajax ({
       type:"POST",
       contentType: 'application/json',
