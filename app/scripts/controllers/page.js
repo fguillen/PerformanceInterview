@@ -11,4 +11,6 @@ angular.module('performanceInterviewApp')
 
 
     $scope.page = INTERVIEW.page_by_id($routeParams.page_id);
+
+    ga('send', 'pageview', {'page': $location.path()});
   });

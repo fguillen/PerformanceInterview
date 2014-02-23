@@ -18,7 +18,8 @@ angular.module('performanceInterviewApp', [
         controller: 'PageCtrl'
       })
       .when('/thanks', {
-        templateUrl: 'views/thanks.html'
+        templateUrl: 'views/thanks.html',
+        controller: 'ThanksCtrl'
       })
       .otherwise({
         templateUrl: '404.html'
