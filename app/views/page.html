@@ -1,7 +1,6 @@
 <div class="jumbotron">
   <h1>{{page.title}}</h1>
 
-
   <div ng-switch="page.kind">
     <div class="lead" ng-switch-when="page">
       <div btf-markdown="page.body.text">
@@ -9,7 +8,7 @@
     </div>
 
     <div ng-switch-when="text">
-      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+      <textarea class="form-control" rows="5" name="{{question.text}}" placeholder="Enter your answer" ng-model="page.answer"></textarea>
     </div>
 
     <div ng-switch-when="radio_button" class="col-sm-offset-2" style="margin-top: 40px;text-align:left; line-height: 1;">
@@ -18,7 +17,7 @@
           <div class="radio" data-ng-repeat="option in page.body.options">
             <label>
               <input type="radio" name="{{page.id}}" value="{{option.text}}" ng-model="page.answer">
-              {{option.text}}
+              <span btf-markdown="option.text"></span>
             </label>
           </div>
         </div>
@@ -28,8 +27,8 @@
 
   <br/> <br/>
   <p>
-    <a class="btn btn-lg btn-warning" ng-if="page.interview.previous_page(page)" ng-href="#{{page.interview.previous_page(page).url}}">Previous</a>
-    <a class="btn btn-lg btn-success" ng-if="!!page.interview.next_page(page)" ng-disabled="!page.answered()" ng-href="#{{page.interview.next_page(page).url}}">Next</a>
-    <a class="btn btn-lg btn-success" ng-if="!page.interview.next_page(page)" ng-disabled="!page.answered()" ng-click="page.interview.send_completion($event)">Submit</a>
+    <!-- <a class="btn btn-lg btn-warning" ng-if="page.interview.previous_page(page)" ng-href="#{{page.interview.previous_page(page).url}}">Previous</a> -->
+    <a class="btn btn-lg btn-default btn-lg" ng-if="!!page.interview.next_page(page)" ng-disabled="!page.answered()" ng-href="#{{page.interview.next_page(page).url}}">Next</a>
+    <a class="btn btn-lg btn-default btn-lg" ng-if="!page.interview.next_page(page)" ng-disabled="!page.answered()" ng-click="page.interview.send_completion($event)" id="sending_button">Submit</a>
   </p>
 </div>

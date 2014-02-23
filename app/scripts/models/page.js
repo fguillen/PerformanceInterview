@@ -7,6 +7,8 @@ var Page = function(interview, data){
   self.title = data.title;
   self.kind = data.kind;
   self.body = data.body;
+  self.end_page = data.end_page;
+
   self.interview = interview;
   self.url = "/pages/" + self.id;
   self.answer;
@@ -31,6 +33,12 @@ var Page = function(interview, data){
     case "page":
       return true;
     }
+  }
+
+  self.get_selected_option = function(){
+    console.log("get_answer", self.get_answer())
+    console.log("options", self.body.options)
+    return _.find(self.body.options, function(e){ return e.text == self.get_answer() })
   }
 
   return self;
