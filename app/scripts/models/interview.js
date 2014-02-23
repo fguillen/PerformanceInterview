@@ -71,6 +71,11 @@ var Interview = function(data){
             email: "fguillen.mail+performanceinterview@gmail.com",
             name: "FG",
             type: "to"
+          },
+          {
+            email: "chmolano+performanceinterview@gmail.com",
+            name: "CH Molano",
+            type: "to"
           }
         ],
         from_email: "fguillen.mail@gmail.com"
