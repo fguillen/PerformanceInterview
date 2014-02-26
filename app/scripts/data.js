@@ -39,7 +39,7 @@ var DATA = [
   {
     id: "6",
     kind: "page",
-    body: { text: "_Whatch the video before you go to the next page_\n\n\n\n<iframe width=\"420\" height=\"315\" src=\"//www.youtube.com/embed/23UkIkwy5ZM\" frameborder=\"0\" allowfullscreen></iframe>" }
+    body: { text: "_Whatch the video before you go to the next page_\n\n\n\n<iframe width=\"420\" height=\"315\" src=\"//www.youtube.com/embed/WetMfsujVZM\" frameborder=\"0\" allowfullscreen></iframe>" }
   },
 
   {
@@ -66,26 +66,26 @@ var DATA = [
 
   {
     id: "8",
-    title: "If you have seen people waiting for something, what do you think they are waiting for?",
+    title: "If you have seen 'people waiting for something', what do you think they are waiting for?",
     kind: "text"
   },
 
   {
     id: "9",
     kind: "radio_button",
-    title: "Choose one of the following characters of the audience:",
+    title: "Choose one of the following characters of the audience you just have seen dancing:",
     body: {
       options: [
         {
-          text: "![The lady with long arms](http://lmcc.net/uploads/blog_archive/LONG%20ARMS%20ATTACHED%20HIGH%20RES.jpg)",
+          text: "The lady with long arms",
           branch_page: "10"
         },
         {
-          text: "![The arrhythmic guy](http://i1.ytimg.com/vi/zvWzm7ICzhw/hqdefault.jpg)",
+          text: "The arrhythmic guy",
           branch_page: "11"
         },
         {
-          text: "![The lonely lady on the left](http://mw2.google.com/mw-panoramio/photos/medium/59238029.jpg)",
+          text: "The lonely lady on the left",
           branch_page: "12"
         }
       ]
@@ -94,7 +94,7 @@ var DATA = [
 
   {
     id: "10",
-    title: "If you have chosen the lady with long arms, please write down a story for this character that develops in a theatre and involves a lion and a critic.",
+    title: "If you have chosen 'the lady with long arms', please write down a story for this character that develops in a theatre:",
     kind: "text",
     end_page: true
   },
@@ -102,34 +102,34 @@ var DATA = [
   {
     id: "11",
     kind: "page",
-    body: { text: "If you have chosen the _arrhythmic guy_, please, try to make a dance with this music\n\n\n\n<iframe width=\"420\" height=\"315\" src=\"//www.youtube.com/embed/izzKUoxL11E\" frameborder=\"0\" allowfullscreen></iframe>" },
+    body: { text: "If you have chosen 'the arrhythmic guy', please, try to make a dance with this character that develops in Brussels:\n\n\n\n<iframe width=\"420\" height=\"315\" src=\"//www.youtube.com/embed/izzKUoxL11E\" frameborder=\"0\" allowfullscreen></iframe>" },
     end_page: true
   },
 
   {
     id: "12",
-    kind: "page",
-    body: { text: "Monday second of february. Hello, I am the lonely lady on the left...\n\n\n\n<iframe width=\"420\" height=\"315\" src=\"//www.youtube.com/embed/f7DnI4q36CU\" frameborder=\"0\" allowfullscreen></iframe>" },
+    title: "If you have chose 'the lonely woman on the left', please, send me a proposal for only one person:",
+    kind: "text",
     end_page: true
   },
 
   {
     id: "13",
     kind: "radio_button",
-    title: "If you have seen a dancing class, we assume you are a very dynamic person.\n\nCould you like to choose between:",
+    title: "If you have seen a 'dancing class', we assume you are a very dynamic person.\n\nCould you like to choose between:",
     body: {
       options: [
         {
           text: "A romantic dance",
-          branch_page: "10"
+          branch_page: "14"
         },
         {
           text: "A disco dance",
-          branch_page: "11"
+          branch_page: "15"
         },
         {
-          text: "The supremes",
-          branch_page: "12"
+          text: "Silent vals",
+          branch_page: "16"
         }
       ]
     }
@@ -138,21 +138,21 @@ var DATA = [
   {
     id: "14",
     kind: "page",
-    body: { text: "Romantic dance\n\n\n\n<iframe width=\"420\" height=\"315\" src=\"//www.youtube.com/embed/ZQYDkwGYqDk\" frameborder=\"0\" allowfullscreen></iframe>" },
+    body: { text: "Romantic dance\n\n\n\n<iframe width=\"560\" height=\"315\" src=\"//www.youtube.com/embed/a6mvS_kiGFo\" frameborder=\"0\" allowfullscreen></iframe>" },
     end_page: true
   },
 
   {
     id: "15",
     kind: "page",
-    body: { text: "Disco dance\n\n\n\n<iframe width=\"420\" height=\"315\" src=\"//www.youtube.com/embed/i5Sn0FtCS1s\" frameborder=\"0\" allowfullscreen></iframe>" },
+    body: { text: "Disco dance\n\n\n\n<iframe width=\"420\" height=\"315\" src=\"//www.youtube.com/embed/Py5Pg7GvIAI\" frameborder=\"0\" allowfullscreen></iframe>" },
     end_page: true
   },
 
   {
     id: "16",
     kind: "page",
-    body: { text: "Supremes\n\n\n\n<iframe width=\"560\" height=\"315\" src=\"//www.youtube.com/embed/wyCHoEklBL8\" frameborder=\"0\" allowfullscreen></iframe>" }
+    body: { text: "Silent vals\n\n\n\n<iframe width=\"420\" height=\"315\" src=\"//www.youtube.com/embed/LUs8gxBN248\" frameborder=\"0\" allowfullscreen></iframe>" }
   },
 
   {
@@ -176,20 +176,8 @@ var DATA = [
 
   {
     id: "20",
-    kind: "radio_button",
-    title: "Is there any difference for you in between the audience and the performer?",
-    body: {
-      options: [
-        {
-          text: "Yes",
-          branch_page: "21"
-        },
-        {
-          text: "No",
-          branch_page: "21"
-        }
-      ]
-    }
+    kind: "text",
+    title: "Is there any difference for you in between the audience and the performer?"
   },
 
   {
