@@ -101,14 +101,14 @@ var DATA = [
 
   {
     id: "11",
-    kind: "page",
-    body: { text: "If you have chosen 'the arrhythmic guy', please, try to make a dance with this character that develops in Brussels:\n\n\n\n<iframe width=\"420\" height=\"315\" src=\"//www.youtube.com/embed/izzKUoxL11E\" frameborder=\"0\" allowfullscreen></iframe>" },
+    kind: "text",
+    title: "If you have chosen 'the arrhythmic guy', please, set a score for this character that take place in brussels:",
     end_page: true
   },
 
   {
     id: "12",
-    title: "If you have chose 'the lonely woman on the left', please, send me a proposal for only one person:",
+    title: "If you have chose 'the lonely woman on the left', please, send me a proposal for me to make:",
     kind: "text",
     end_page: true
   },
@@ -139,6 +139,12 @@ var DATA = [
     id: "14",
     kind: "page",
     body: { text: "Romantic dance\n\n\n\n<iframe width=\"560\" height=\"315\" src=\"//www.youtube.com/embed/a6mvS_kiGFo\" frameborder=\"0\" allowfullscreen></iframe>" },
+  },
+
+  {
+    id: "14a",
+    title: "Could you please imagine a choreography for me?",
+    kind: "text",
     end_page: true
   },
 
@@ -146,6 +152,12 @@ var DATA = [
     id: "15",
     kind: "page",
     body: { text: "Disco dance\n\n\n\n<iframe width=\"420\" height=\"315\" src=\"//www.youtube.com/embed/Py5Pg7GvIAI\" frameborder=\"0\" allowfullscreen></iframe>" },
+  },
+
+  {
+    id: "15a",
+    title: "Could you please imagine a choreography for me?",
+    kind: "text",
     end_page: true
   },
 
@@ -156,7 +168,7 @@ var DATA = [
   },
 
   {
-    id: "17",
+    id: "16a",
     title: "Could you please imagine a choreography for me?",
     kind: "text",
     end_page: true
@@ -192,7 +204,7 @@ var DATA = [
         },
         {
           text: "Performer",
-          branch_page: "22"
+          branch_page: "24"
         }
       ]
     }
@@ -206,6 +218,19 @@ var DATA = [
 
   {
     id: "23",
+    title: "Do you feel connected with the other during a performance or most likely do you find yourself alone in the middle of the crowd?",
+    kind: "text",
+    end_page: true
+  },
+
+  {
+    id: "24",
+    title: "What do you think is the most important activity as an performer?",
+    kind: "text"
+  },
+
+  {
+    id: "25",
     title: "Do you feel connected with the other during a performance or most likely do you find yourself alone in the middle of the crowd?",
     kind: "text",
     end_page: true
